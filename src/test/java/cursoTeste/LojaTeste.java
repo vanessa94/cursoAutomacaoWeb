@@ -1,18 +1,12 @@
 package cursoTeste;
 
 import static org.hamcrest.MatcherAssert.*;
-
-import java.util.List;
-
 import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 
-import core.Driver;
 import pages.InicialPage;
 
 
@@ -41,6 +35,6 @@ public class LojaTeste extends BaseTest {
 	public void testClickLista() {
 		inicialPage.setPesquisa("html", Keys.ENTER);
 		String preco = inicialPage.getPrecoLista();
-		assertThat("R$444,50", is(preco));
+		assertThat("R$444,50", is (preco));
 	}
 }

@@ -1,25 +1,14 @@
 package pages;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-import core.Driver;
 import map.InicialMap;
 
 public class InicialPage {
 	InicialMap inicialMap = new InicialMap();
-	String elLivros = "ul.products-grid > li";
-	String elPrecoLista = "span.price";
-	String elTituloLivroLista = "h2 > a";
 	
-//	By byPesquisa = By.id("search");
-
 	public void setPesquisa(CharSequence... valor) {
 		inicialMap.pesquisa.sendKeys(valor);
 	}

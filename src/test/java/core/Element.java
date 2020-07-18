@@ -26,19 +26,19 @@ public class Element {
 		WebElement element = null;
 		switch (by) {
 		case ID:
-			element = get (By.id(map));
+			element = get(By.id(map));
 			break;
 		case XPATH:
-			element = get (By.xpath(map));
+			element = get(By.xpath(map));
 			break;
 		case CSS:
-			element = get (By.cssSelector(map));
+			element = get(By.cssSelector(map));
 			break;
 		case LINKTEXT:
-			element = get (By.linkText(map));
+			element = get(By.linkText(map));
 			break;
 		case NAME:
-			element = get (By.name(map));
+			element = get(By.name(map));
 			break;
 
 		default:
@@ -52,7 +52,7 @@ public class Element {
 			return Driver.getDriver().findElement(by);
 		}
 		else {
-			return Driver.getDriver().findElement(by);
+			return webElement.findElement(by);
 		}
 	}
 	
