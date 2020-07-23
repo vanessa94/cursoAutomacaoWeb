@@ -1,46 +1,41 @@
 package steps;
 
-import core.Driver;
+import static org.junit.Assert.assertEquals;
+
+import org.openqa.selenium.Keys;
+
+//import core.Driver;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import pages.InicialPage;
 
 public class InicialSteps {
+	InicialPage inicialPage = new InicialPage();
+	
 	@Dado("que estou na pagina principal da loja virtual")
 	public void que_estou_na_pagina_principal_da_loja_virtual() {
-		Driver.setUrl("https://lojaexemplod.lojablindada.com");
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		//Driver.setUrl("https://lojaexemplod.lojablindada.com");
 	}
 
 	@Quando("realizo a busca do livro {string}")
 	public void realizo_a_busca_do_livro(String titulo) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    inicialPage.setPesquisa(titulo, Keys.ENTER);
 	}
 
 	@Entao("valido o titulo sendo {string}")
 	public void valido_o_titulo_sendo(String titulo) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		assertEquals(titulo,inicialPage.getTituloLivro());
 	}
 
 	@Entao("o preco sendo {string}")
 	public void o_preco_sendo(String preco) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		assertEquals(preco,inicialPage.getPreco());  
 	}
 
 	@Quando("clico no livro pesquisado")
 	public void clico_no_livro_pesquisado() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Entao("confirmo o titulo sendo {string} e o preco sendo {string}")
-	public void confirmo_o_titulo_sendo_e_o_preco_sendo(String titulo, String preco) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   inicialPage.clickTitulo();
 	}
 
 

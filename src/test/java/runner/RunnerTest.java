@@ -8,15 +8,13 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resurces/features",
-		tags = "@",
-		glue = "stesp",
-		plugin = {"json:target/reports/CucumberReport.json", "pretty"},
+		features = "src/test/resources/features",
+		tags = "@ExemploEsquema",
+		glue = "steps",
+		plugin = {"json:target/reports/CucumberReports.json", "pretty"},
 		snippets = SnippetType.CAMELCASE
+			
 		)
-
-
-
 public class RunnerTest {
 
 }

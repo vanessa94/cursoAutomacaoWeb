@@ -34,5 +34,9 @@ public class InicialPage {
 		}
 		return null;
 	}
+	
+	public void clickTitulo() {
+		inicialMap.tituloLivro.click();
+	}
 
 }
